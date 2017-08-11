@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Mar 21 11:13:25 2017
+# Process ID: 3992
+# Log file: C:/Users/leclair.m.NUNET/Downloads/lab6/lab6.runs/impl_1/pdatapath_top.vdi
+# Journal file: C:/Users/leclair.m.NUNET/Downloads/lab6/lab6.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source pdatapath_top.tcl -notrace

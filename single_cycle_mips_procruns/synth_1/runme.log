@@ -1,0 +1,696 @@
+
+*** Running vivado
+    with args -log datapath_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source datapath_top.tcl
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source datapath_top.tcl -notrace
+Command: synth_design -top datapath_top -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 267.520 ; gain = 86.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'datapath_top' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/liang.vi/Downloads/datapath_top.v:21]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/Downloads/debounce.v:8]
+	Parameter NDELAY bound to: 25000000 - type: integer 
+	Parameter NBITS bound to: 26 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/Downloads/debounce.v:8]
+INFO: [Synth 8-638] synthesizing module 'pc_logic' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/new/pc_counter.v:22]
+INFO: [Synth 8-256] done synthesizing module 'pc_logic' (2#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/new/pc_counter.v:22]
+INFO: [Synth 8-638] synthesizing module 'instr_mem' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/instr_mem_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'instr_mem' (3#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/instr_mem_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'inst_decoder' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:42]
+INFO: [Synth 8-256] done synthesizing module 'inst_decoder' (4#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:23]
+INFO: [Synth 8-638] synthesizing module 'eightbit_alu' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/Downloads/lab5-20170321T131117Z-001/lab5/lab5.srcs/sources_1/imports/leclair.m/Desktop/eightbit_palu.v:3]
+INFO: [Synth 8-256] done synthesizing module 'eightbit_alu' (5#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/Downloads/lab5-20170321T131117Z-001/lab5/lab5.srcs/sources_1/imports/leclair.m/Desktop/eightbit_palu.v:3]
+INFO: [Synth 8-638] synthesizing module 'PmodOLEDCtrl' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/PmodOLEDCtrl.vhd:41]
+INFO: [Synth 8-3491] module 'OledInit' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledInit.vhd:19' bound to instance 'Init' of component 'OledInit' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/PmodOLEDCtrl.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'OledInit' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledInit.vhd:33]
+INFO: [Synth 8-3491] module 'SpiCtrl' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SpiCtrl.vhd:21' bound to instance 'SPI_COMP' of component 'SpiCtrl' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledInit.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'SpiCtrl' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SpiCtrl.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'SpiCtrl' (6#1) [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SpiCtrl.vhd:32]
+INFO: [Synth 8-3491] module 'Delay' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/Delay.vhd:19' bound to instance 'DELAY_COMP' of component 'Delay' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledInit.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'Delay' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/Delay.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Delay' (7#1) [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/Delay.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'OledInit' (8#1) [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledInit.vhd:33]
+INFO: [Synth 8-3491] module 'OledEx' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:23' bound to instance 'Example' of component 'OledEx' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/PmodOLEDCtrl.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'OledEx' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:39]
+INFO: [Synth 8-3491] module 'SpiCtrl' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SpiCtrl.vhd:21' bound to instance 'SPI_COMP' of component 'SpiCtrl' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:241]
+INFO: [Synth 8-3491] module 'Delay' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/Delay.vhd:19' bound to instance 'DELAY_COMP' of component 'Delay' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:252]
+INFO: [Synth 8-3491] module 'charLib' declared at 'C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/charLib_stub.v:7' bound to instance 'CHAR_LIB_COMP' of component 'charLib' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'charLib' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/charLib_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'charLib' (9#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/charLib_stub.v:7]
+INFO: [Synth 8-3491] module 'SIGNDET' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SIGNDET.vhd:35' bound to instance 'SIGNDETect_alu1stin' of component 'SIGNDET' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'SIGNDET' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SIGNDET.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'SIGNDET' (10#1) [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SIGNDET.vhd:42]
+INFO: [Synth 8-3491] module 'SIGNDET' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SIGNDET.vhd:35' bound to instance 'SIGNDETect_alu2ndin' of component 'SIGNDET' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:267]
+INFO: [Synth 8-3491] module 'SIGNDET' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/SIGNDET.vhd:35' bound to instance 'SIGNDETect_aluout' of component 'SIGNDET' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:268]
+INFO: [Synth 8-3491] module 'BINBCD8' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/BINBCD8.vhd:38' bound to instance 'Bin2BCDconv_alu1stin' of component 'BINBCD8' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:270]
+INFO: [Synth 8-638] synthesizing module 'BINBCD8' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/BINBCD8.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'BINBCD8' (11#1) [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/BINBCD8.vhd:45]
+INFO: [Synth 8-3491] module 'BINBCD8' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/BINBCD8.vhd:38' bound to instance 'Bin2BCDconv_alu2ndin' of component 'BINBCD8' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:271]
+INFO: [Synth 8-3491] module 'BINBCD8' declared at 'C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/BINBCD8.vhd:38' bound to instance 'Bin2BCDconv_aluout' of component 'BINBCD8' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:272]
+INFO: [Synth 8-226] default block is never used [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:277]
+WARNING: [Synth 8-614] signal 'IN1_1c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'IN1_2c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'IN1_3c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'IN2_1c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'IN2_2c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'IN2_3c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'ALUOUT_1c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'ALUOUT_2c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'ALUOUT_3c' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+WARNING: [Synth 8-614] signal 'TEMP_OVF' is read in the process but is not in the sensitivity list [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:275]
+INFO: [Synth 8-256] done synthesizing module 'OledEx' (12#1) [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/PmodOLEDCtrl.vhd:127]
+INFO: [Synth 8-256] done synthesizing module 'PmodOLEDCtrl' (13#1) [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/PmodOLEDCtrl.vhd:41]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/liang.vi/Downloads/datapath_top.v:147]
+INFO: [Synth 8-638] synthesizing module 'vio_0' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/vio_0_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'vio_0' (14#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/vio_0_stub.v:7]
+WARNING: [Synth 8-689] width (9) of port connection 'probe_in3' does not match port width (8) of module 'vio_0' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/liang.vi/Downloads/datapath_top.v:152]
+WARNING: [Synth 8-689] width (9) of port connection 'probe_in4' does not match port width (8) of module 'vio_0' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/liang.vi/Downloads/datapath_top.v:153]
+INFO: [Synth 8-638] synthesizing module 'reg_file' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/Downloads/lab5-20170321T131117Z-001/lab5/lab5.srcs/sources_1/imports/leclair.m/Desktop/reg_file.v:1]
+INFO: [Synth 8-256] done synthesizing module 'reg_file' (15#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/Downloads/lab5-20170321T131117Z-001/lab5/lab5.srcs/sources_1/imports/leclair.m/Desktop/reg_file.v:1]
+INFO: [Synth 8-638] synthesizing module 'data_memory' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/data_memory_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'data_memory' (16#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/.Xil/Vivado-8648-WLM3417EBAB1C33/realtime/data_memory_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'datapath_top' (17#1) [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/liang.vi/Downloads/datapath_top.v:21]
+WARNING: [Synth 8-3331] design datapath_top has unconnected port clk_sel
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 311.656 ; gain = 130.488
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 311.656 ; gain = 130.488
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/leclair.m.NUNET/Downloads/datapath.xdc]
+Finished Parsing XDC File [C:/Users/leclair.m.NUNET/Downloads/datapath.xdc]
+Parsing XDC File [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 638.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for PmodOLEDCtrl_inst/Example/CHAR_LIB_COMP. (constraint file  C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.runs/synth_1/dont_touch.xdc, line 5).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SpiCtrl'
+INFO: [Synth 8-5544] ROM "SPI_FIN" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "counter" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "shift_counter" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Delay'
+INFO: [Synth 8-5544] ROM "ms_counter" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "temp_delay_ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,11][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,12][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,13][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,14][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[0,15][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,13][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,14][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[1,15][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[2,13][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,1][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,2][7:0]' into 'current_screen_reg[2,14][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,7][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,8][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,9][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,10][7:0]' into 'current_screen_reg[0,7][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,13][7:0]' into 'current_screen_reg[3,0][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-4471] merging register 'current_screen_reg[3,14][7:0]' into 'current_screen_reg[1,11][7:0]' [C:/Users/leclair.m.NUNET/Downloads/OLED_source_files/OLED_source_files/HDLs/OledExample.vhd:421]
+INFO: [Synth 8-5546] ROM "FIN" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "after_page_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "after_char_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "init_en" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "example_en" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_reg[3]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mem_reg[0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'RegWrite_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'RegDst_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:45]
+WARNING: [Synth 8-327] inferring latch for variable 'immediate_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUSrc1_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUSrc2_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUOp_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'MemWrite_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'MemToReg_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:51]
+WARNING: [Synth 8-327] inferring latch for variable 'rs_addr_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'rt_addr_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_addr_reg' [C:/Users/leclair.m.NUNET/Downloads/lab7completed/lab7completed/lab7completed.srcs/sources_1/imports/new/inst_decoder.v:83]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                    send |                              001 |                              001
+                   hold1 |                              010 |                              010
+                   hold2 |                              011 |                              011
+                   hold3 |                              100 |                              100
+                   hold4 |                              101 |                              101
+                    done |                              110 |                              110
+                  iSTATE |                              111 |                              111
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SpiCtrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                    hold |                               01 |                               01
+                    done |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'Delay'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 33    
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 53    
+	                5 Bit    Registers := 9     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	  30 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	  30 Input     12 Bit        Muxes := 1     
+	  30 Input     11 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 8     
+	  28 Input      8 Bit        Muxes := 1     
+	  30 Input      8 Bit        Muxes := 46    
+	   4 Input      8 Bit        Muxes := 16    
+	   2 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 5     
+	  28 Input      5 Bit        Muxes := 1     
+	  30 Input      5 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 62    
+	  15 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 3     
+	  30 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 40    
+	  15 Input      1 Bit        Muxes := 9     
+	   8 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+	  28 Input      1 Bit        Muxes := 10    
+	  30 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module datapath_top 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module pc_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module inst_decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	  15 Input      3 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 9     
+Module eightbit_alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   8 Input      1 Bit        Muxes := 2     
+Module SpiCtrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   8 Input      1 Bit        Muxes := 1     
+Module Delay 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module OledInit 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	  28 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	  28 Input      5 Bit        Muxes := 1     
+	  28 Input      1 Bit        Muxes := 10    
+Module BINBCD8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 10    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 20    
+Module OledEx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 49    
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  30 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	  30 Input     12 Bit        Muxes := 1     
+	  30 Input     11 Bit        Muxes := 1     
+	  30 Input      8 Bit        Muxes := 46    
+	   4 Input      8 Bit        Muxes := 16    
+	   8 Input      7 Bit        Muxes := 5     
+	  30 Input      5 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  30 Input      2 Bit        Muxes := 2     
+	  30 Input      1 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module PmodOLEDCtrl 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module reg_file 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 4     
++---Muxes : 
+	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design datapath_top has unconnected port clk_sel
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 638.387 ; gain = 457.219
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-------------+------------+---------------+----------------+
+|Module Name  | RTL Object | Depth x Width | Implemented As | 
++-------------+------------+---------------+----------------+
+|OledInit     | rom        | 32x1          | LUT            | 
+|OledInit     | rom__1     | 32x5          | LUT            | 
+|OledInit     | rom__2     | 32x1          | LUT            | 
+|OledEx       | rom__3     | 32x1          | LUT            | 
+|PmodOLEDCtrl | rom        | 32x1          | LUT            | 
+|PmodOLEDCtrl | rom__4     | 32x5          | LUT            | 
+|PmodOLEDCtrl | rom__5     | 32x1          | LUT            | 
+|PmodOLEDCtrl | rom__6     | 32x1          | LUT            | 
++-------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 638.387 ; gain = 457.219
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 638.387 ; gain = 457.219
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\Init/temp_dc_reg ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/temp_delay_ms_reg[9] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/temp_delay_ms_reg[8] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/temp_delay_ms_reg[7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/temp_delay_ms_reg[5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/temp_delay_ms_reg[4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/temp_delay_ms_reg[2] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/temp_delay_ms_reg[1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/temp_delay_ms_reg[0] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/after_char_state_reg[1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,0][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,0][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,0][3] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,0][0] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,0][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,0][3] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,0][0] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,0][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,0][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,0][3] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,0][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,0][3] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,0][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,0][0] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,7][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,7][6] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,7][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,7][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,7][3] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,7][2] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,7][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,7][0] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,1][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,1][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,1][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,1][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,1][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,1][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,1][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,1][2] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,1][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,1][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,1][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,1][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,1][2] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,1][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,1][0] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,14][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,14][6] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,14][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,14][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,2][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,2][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,2][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,2][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,2][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,2][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,2][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,2][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,2][2] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,2][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,3][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,3][6] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,3][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,3][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,3][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,3][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,3][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,3][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[2,3][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,3][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,3][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,3][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,3][2] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,3][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,3][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,3][3] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,3][2] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,4][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,4][6] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,4][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,4][3] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,4][2] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,4][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,4][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,4][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,4][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,4][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,4][3] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,4][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,4][0] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,5][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,5][6] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[3,5][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,5][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,5][5] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,5][4] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[1,5][1] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,5][7] ) is unused and will be removed from module PmodOLEDCtrl.
+WARNING: [Synth 8-3332] Sequential element (\Example/current_screen_reg[0,5][4] ) is unused and will be removed from module PmodOLEDCtrl.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 643.988 ; gain = 462.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 643.988 ; gain = 462.820
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 643.988 ; gain = 462.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 643.988 ; gain = 462.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 643.988 ; gain = 462.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 643.988 ; gain = 462.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |instr_mem     |         1|
+|2     |charLib       |         1|
+|3     |vio_0         |         1|
+|4     |data_memory   |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |charLib     |     1|
+|2     |data_memory |     1|
+|3     |instr_mem   |     1|
+|4     |vio_0       |     1|
+|5     |BUFG        |     1|
+|6     |CARRY4      |    37|
+|7     |LUT1        |   100|
+|8     |LUT2        |    78|
+|9     |LUT3        |    76|
+|10    |LUT4        |    61|
+|11    |LUT5        |   133|
+|12    |LUT6        |   209|
+|13    |MUXF7       |    22|
+|14    |FDCE        |    73|
+|15    |FDPE        |     2|
+|16    |FDRE        |   419|
+|17    |FDSE        |     8|
+|18    |LD          |    23|
+|19    |LDC         |     1|
+|20    |IBUF        |     4|
+|21    |OBUF        |     6|
++------+------------+------+
+
+Report Instance Areas: 
++------+----------------------+-------------+------+
+|      |Instance              |Module       |Cells |
++------+----------------------+-------------+------+
+|1     |top                   |             |  1286|
+|2     |  pc_counter          |pc_logic     |    19|
+|3     |  instruction_decoder |inst_decoder |    35|
+|4     |  alu                 |eightbit_alu |    32|
+|5     |  PmodOLEDCtrl_inst   |PmodOLEDCtrl |  1003|
+|6     |    Example           |OledEx       |   802|
+|7     |      DELAY_COMP      |Delay_0      |    82|
+|8     |      SPI_COMP        |SpiCtrl_1    |    54|
+|9     |    Init              |OledInit     |   199|
+|10    |      DELAY_COMP      |Delay        |    86|
+|11    |      SPI_COMP        |SpiCtrl      |    55|
+|12    |  register_file       |reg_file     |    58|
+|13    |  debounce_clk        |debounce     |    76|
++------+----------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 643.988 ; gain = 462.820
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 194 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 643.988 ; gain = 92.512
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 643.988 ; gain = 462.820
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 8 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 24 instances were transformed.
+  LD => LDCE: 23 instances
+  LDC => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+97 Infos, 126 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 645.160 ; gain = 424.652
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 645.160 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 10:17:42 2017...
